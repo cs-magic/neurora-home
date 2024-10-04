@@ -1,4 +1,11 @@
 import { withContentlayer } from "next-contentlayer";
+import path from "path";
+import dotenv from "dotenv";
+import { fileURLToPath } from "node:url";
+
+dotenv.config({
+	path: path.join(fileURLToPath(import.meta.url), "../../.env"),
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
