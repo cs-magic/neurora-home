@@ -24,7 +24,7 @@
     "paths": {
       "@/*": ["./*"],
       "contentlayer/generated": ["./.contentlayer/generated"],
-      "@assets/*": ["../../assets/*"]
+      "@assets/*": ["../../../assets/*"]
 
     }
   },

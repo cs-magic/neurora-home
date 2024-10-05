@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "icon": "Library",
+  "title": "Neurora Assistant",
+  "pages": [
+    "---Guide---",
+    "index",
+    "---References---"
+  ]
+}

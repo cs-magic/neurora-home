@@ -1,0 +1,9 @@
+{
+  "title": "Business Plan",
+  "root": true,
+  "icon": "Building2",
+  "pages": [
+    "---Overview---",
+    "index"
+  ]
+}

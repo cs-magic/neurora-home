@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "icon": "Building2",
+  "title": "TotemGPT",
+  "pages": [
+    "---Guide---",
+    "index",
+    "---References---"
+  ]
+}
