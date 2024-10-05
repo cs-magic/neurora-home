@@ -23,9 +23,15 @@ export default async function ProjectsPage() {
     {} as Record<string, number>,
   );
 
-  const featured = allProjects.find((project) => project.slug === "assistant")!;
-  const top2 = allProjects.find((project) => project.slug === "arthur")!;
-  const top3 = allProjects.find((project) => project.slug === "totem-gpt")!;
+  const featured = allProjects.find(
+    (project) => project.slug === "neurora-assistant",
+  )!;
+  const top2 = allProjects.find(
+    (project) => project.slug === "awesome-prompts",
+  )!;
+  const top3 = allProjects.find(
+    (project) => project.slug === "neurora-playground",
+  )!;
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
@@ -49,7 +55,8 @@ export default async function ProjectsPage() {
             Projects
           </h2>
           <p className="mt-4 text-zinc-400">
-            Some of the projects are from work and some are on my own time.
+            Some of the projects can serve for the mass, and most are out of my
+            own interest.
           </p>
         </div>
         <div className="w-full h-px bg-zinc-800" />
