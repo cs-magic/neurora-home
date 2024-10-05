@@ -13,7 +13,7 @@
     "fmt": "pnpm rome check . --apply-unsafe && pnpm rome format . --write"
   },
   "dependencies": {
-    "shiki": "0.14.5",
+    "@cs-magic/shadcn": "workspace:^",
     "@next/font": "^13.5.4",
     "@next/mdx": "^13.5.4",
     "@upstash/redis": "^1.23.3",
@@ -30,6 +30,7 @@
     "rehype-pretty-code": "^0.10.1",
     "rehype-slug": "^6.0.0",
     "remark-gfm": "3.0.1",
+    "shiki": "0.14.5",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
