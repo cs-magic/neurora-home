@@ -1,4 +1,5 @@
 import "../global.css";
+import { cn } from "@cs-magic/shadcn/lib/utils";
 import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
@@ -66,9 +67,10 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body
-        className={`bg-black ${
-          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-        }`}
+        className={cn(
+          `bg-black text-white`,
+          process.env.NODE_ENV === "development" && "debug-screens",
+        )}
       >
         {children}
       </body>
