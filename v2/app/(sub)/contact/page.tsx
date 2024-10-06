@@ -1,5 +1,5 @@
 "use client";
-import { MarkWechatQrcodeSVG } from "@assets/branding/mark/mark-wechat-qrcode.svg.ts";
+import { MarkWechatQrcodeSVG } from "@assets/branding/mark/mark-wechat-qrcode-svg.ts";
 import { cn } from "@cs-magic/shadcn/lib/utils";
 import { Github, Mail, Twitter } from "lucide-react";
 import { IoLogoWechat } from "react-icons/io5";
