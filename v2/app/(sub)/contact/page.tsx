@@ -1,15 +1,14 @@
 "use client";
-import { MarkWechatQrcodeSVG } from "@assets/branding/mark/mark-wechat-qrcode-svg.ts";
-import { GZHSVG } from "@assets/branding/third-parties/wechat/公众号-svg.ts";
+import MarkWechatQrcodeSVG from "@assets/branding/mark/mark-wechat-qrcode.svg";
+import GZHSVG from "@assets/branding/third-parties/wechat/公众号.svg";
 import JikeLogoPNMG from "@assets/branding/third-parties/即刻-logo.png";
 import { cn } from "@cs-magic/shadcn/lib/utils";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Card } from "app/components/card.tsx";
+import { Github, Mail } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoWechat } from "react-icons/io5";
-import Link from "next/link";
-import { Card } from "app/components/card.tsx";
-import { Navigation } from "app/components/nav.tsx";
 
 const socials = [
   {
@@ -51,8 +50,7 @@ const socials = [
   {
     icon: <IoLogoWechat size={20} className={"group-hover:text-[#09B83E]"} />,
     label: "微信个人号",
-    handle: "@youshouldspeakhow",
-    // href: "https://u.wechat.com/MIJ3DUFz7e-Oyb5Jc2_BIuM",
+    handle: "@youshouldspeakhow", // href: "https://u.wechat.com/MIJ3DUFz7e-Oyb5Jc2_BIuM",
     qrcode: (
       <MarkWechatQrcodeSVG
         className={"opacity-0 group-hover:opacity-100 h-[72px]"}
@@ -63,8 +61,7 @@ const socials = [
   {
     icon: <GZHSVG width={24} className={"group-hover:text-[#07C160]"} />,
     label: "微信公众号",
-    handle: "@南川随笔",
-    // href: "https://u.wechat.com/MIJ3DUFz7e-Oyb5Jc2_BIuM",
+    handle: "@南川随笔", // href: "https://u.wechat.com/MIJ3DUFz7e-Oyb5Jc2_BIuM",
   },
 ];
 
