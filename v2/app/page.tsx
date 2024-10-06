@@ -1,4 +1,5 @@
-import { NeuroraBannerSVG } from "@assets/branding/neurora/neurora-banner.svg.ts";
+import { NeuroraBannerSVG } from "@assets/branding/neurora/neurora-banner-svg";
+// import NeuroraBannerSVG from "@assets/branding/neurora/neurora-banner.svg";
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";

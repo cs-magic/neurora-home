@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@opentelemetry/api": "*",
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "*",
