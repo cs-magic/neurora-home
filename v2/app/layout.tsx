@@ -4,7 +4,8 @@ import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
-import LogoImage from "@assets/branding/neurora/neurora_logo_white_black_1280.png";
+import LogoPNG from "@assets/branding/neurora/neurora_logo_white_black_1280.png";
+import BannerPNG from "@assets/branding/neurora/neurora-banner-white-black.png";
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "cs-magic.cn",
     images: [
       {
-        url: "https://cs-magic.cn/og.png",
+        url: BannerPNG.src,
         width: 1920,
         height: 1080,
       },
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   icons: {
-    shortcut: LogoImage.src,
+    shortcut: LogoPNG.src,
   },
 };
 const inter = Inter({
