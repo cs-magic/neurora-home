@@ -1,6 +1,6 @@
 "use client";
 import { navs } from "@/app/common.config.ts";
-import { NeuroraSVG } from "@assets/branding/neurora/neurora.svg.ts";
+import { NeuroraSVG } from "@assets/branding/neurora/neurora_logo_black_white_1280-svg.ts";
 import { ButtonLink } from "@cs-magic/react/components/button-link";
 import { cn } from "@cs-magic/shadcn/lib/utils";
 import { Button } from "@cs-magic/shadcn/ui/button";

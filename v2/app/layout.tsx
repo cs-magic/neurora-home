@@ -4,6 +4,7 @@ import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
+import LogoImage from "@assets/branding/neurora/neurora_logo_white_black_1280.png";
 
 export const metadata: Metadata = {
   title: {
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   icons: {
-    shortcut: "/favicon.png",
+    shortcut: LogoImage.src,
   },
 };
 const inter = Inter({
