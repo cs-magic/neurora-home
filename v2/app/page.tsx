@@ -1,5 +1,5 @@
 import { navs } from "@/app/common.config.ts";
-import { NeuroraBannerSVG } from "@assets/branding/neurora/neurora-banner-svg";
+import BannerSVG from "@assets/branding/neurora/neurora-banner-current-trans.svg";
 import { ButtonLink } from "@cs-magic/react/components/button-link";
 import { cn } from "@cs-magic/shadcn/lib/utils";
 import _ from "lodash";
@@ -35,7 +35,7 @@ export default function Home() {
         quantity={100}
       />
 
-      <NeuroraBannerSVG className="py-3.5 px-1 w-full max-w-screen-md z-10 cursor-default duration-100 animate-title text-white" />
+      <BannerSVG className="py-3.5 px-1 w-full max-w-screen-md z-10 cursor-default duration-100 animate-title text-white" />
       {/*<h1 className="py-3.5 px-0.5 z-10 cursor-default duration-100 animate-title text-4xl text-transparent bg-white text-edge-outline font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">*/}
       {/*  <p>NEURORA</p>*/}
       {/*  /!*<p className={"text-6xl"}>飞脑科技</p>*!/*/}
@@ -52,7 +52,7 @@ export default function Home() {
           >
             Mark
           </Link>
-          , An Indie Hacker passionate about building cooool things 🚀 🚀 🚀
+          , An Indie Hacker passionate about building COOL things 🚀 🚀 🚀
         </h2>
       </div>
     </div>

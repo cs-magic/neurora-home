@@ -4,7 +4,7 @@ import { Mdx } from "@/app/components/mdx.tsx";
 import { Header } from "app/(sub)/projects/[slug]/header.tsx";
 import "app/(sub)/projects/[slug]/mdx.css";
 import { ReportView } from "app/(sub)/projects/[slug]/view.tsx";
-import { Redis } from "@upstash/redis";
+import { redis } from "@/app/server.config";
 
 export const revalidate = 60;
 
@@ -13,8 +13,6 @@ type Props = {
     slug: string;
   };
 };
-
-const redis = Redis.fromEnv();
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
   return allProjects
