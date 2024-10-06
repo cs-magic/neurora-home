@@ -15,6 +15,7 @@ export default function Home() {
           {navs.map((nav) => (
             <ButtonLink
               key={nav.href}
+              variant={"link"}
               href={nav.href}
               className={cn(
                 "text-sm",

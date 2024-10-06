@@ -10,7 +10,7 @@ export const CardBadges = ({ project }: { project: Project }) => {
         <Badge
           key={tag}
           variant={"outline"}
-          className={"border-gray-500/30 shrink-0"}
+          className={"border-gray-500/30 shrink-0 text-gray-100"}
         >
           {_.startCase(_.camelCase(tag))}
         </Badge>

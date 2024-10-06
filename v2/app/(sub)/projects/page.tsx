@@ -38,8 +38,8 @@ export default async function ProjectsPage() {
     );
 
   return (
-    <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
-      <div className="max-w-2xl mx-auto lg:mx-0">
+    <div className="px-6 pt-4 mx-auto space-y-8 md:space-y-16 w-full">
+      <div className="mx-auto lg:mx-0">
         <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
           Projects
         </h2>
@@ -66,14 +66,16 @@ export default async function ProjectsPage() {
 
       <Tabs defaultValue={docGroups[0]} className={"w-full"}>
         <TabsList
-          className={"flex justify-start items-center gap-4 text-5xl w-full"}
+          className={
+            "flex justify-start items-center gap-4 text-5xl w-full bg-transparent"
+          }
         >
           {docGroups.map((group) => (
             <TabsTrigger
               value={group}
               key={group}
               className={
-                "text-xl hover:underline text-white/50 data-[state=active]:text-white"
+                "text-xl hover:underline text-white/50 data-[state=active]:bg-transparent data-[state=active]:text-white"
               }
             >
               {_.capitalize(group)}

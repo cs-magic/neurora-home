@@ -1,4 +1,3 @@
-import "../global.css";
 import { cn } from "@cs-magic/shadcn/lib/utils";
 import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
@@ -6,6 +5,8 @@ import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 import LogoPNG from "@assets/branding/neurora/neurora_logo_white_black_1280.png";
 import BannerPNG from "@assets/branding/neurora/neurora-banner-white-black.png";
+
+import "@assets/styles/main.css";
 
 export const metadata: Metadata = {
   title: {
@@ -70,7 +71,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          `bg-black text-white`,
+          `bg-black text-white  overflow-x-hidden`,
           process.env.NODE_ENV === "development" && "debug-screens",
         )}
       >

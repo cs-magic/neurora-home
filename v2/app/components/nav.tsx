@@ -30,6 +30,7 @@ export const Navigation: React.FC = () => {
           <div className="flex justify-between gap-0 sm:gap-4 md:gap-8">
             {navs.map((nav) => (
               <ButtonLink
+                variant="link"
                 key={nav.name}
                 href={nav.href}
                 className={cn(
