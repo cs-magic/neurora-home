@@ -60,10 +60,10 @@ export default function Example() {
                 {s.icon}
               </span>
               <span
-                className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent opacity-0 group-hover:opacity-100"
+                className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent sm:opacity-0 sm:group-hover:opacity-100"
                 aria-hidden="true"
               />{" "}
-              <div className="z-10 flex flex-col items-center opacity-0 group-hover:opacity-100">
+              <div className="z-10 flex flex-col items-center sm:opacity-0 sm:group-hover:opacity-100">
                 {/*{s.qrcode ? (*/}
                 {/*  s.qrcode*/}
                 {/*) : (*/}

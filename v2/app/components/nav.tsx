@@ -1,5 +1,8 @@
 "use client";
 import { navs } from "@/app.config.ts";
+import { ButtonLink } from "@cs-magic/react/components/button-link";
+import { cn } from "@cs-magic/shadcn/lib/utils";
+import { Button } from "@cs-magic/shadcn/ui/button";
 import _ from "lodash";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
@@ -29,15 +32,20 @@ export const Navigation: React.FC = () => {
         }`}
       >
         <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
-          <div className="flex justify-between gap-8">
+          <div className="flex justify-between gap-0 sm:gap-4 md:gap-8">
             {navs.map((nav) => (
-              <Link
-                key={nav}
-                href={`/${nav}`}
-                className="duration-200 text-zinc-400 hover:text-zinc-100"
+              <ButtonLink
+                key={nav.name}
+                href={nav.href}
+                className={cn(
+                  nav.active
+                    ? "duration-200 text-zinc-400 hover:text-zinc-100"
+                    : "cursor-not-allowed text-zinc-700",
+                )}
+                disabled={!nav.active}
               >
-                {_.capitalize(nav)}
-              </Link>
+                {_.capitalize(nav.name)}
+              </ButtonLink>
             ))}
           </div>
 

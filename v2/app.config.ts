@@ -1,5 +1,5 @@
 export const navs = [
-  "projects",
-  // "blog",
-  "contact",
+  { href: "/projects", name: "projects", active: true },
+  { href: "/blog", name: "blog", active: false },
+  { href: "/contact", name: "contact", active: true },
 ];

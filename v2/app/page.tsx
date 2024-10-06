@@ -1,28 +1,30 @@
 import { navs } from "@/app.config.ts";
 import { NeuroraBannerSVG } from "@assets/branding/neurora/neurora-banner-svg";
-import _ from "lodash";
+import { ButtonLink } from "@cs-magic/react/components/button-link";
+import { cn } from "@cs-magic/shadcn/lib/utils";
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";
-
-const navigation = navs.map((nav) => ({
-  name: _.capitalize(nav),
-  href: `/${nav}`,
-}));
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black p-4 sm:p-8 md:p-16">
       <nav className="my-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
+          {navs.map((nav) => (
+            <ButtonLink
+              key={nav.href}
+              href={nav.href}
+              className={cn(
+                "text-sm",
+                nav.active
+                  ? "text-zinc-500 hover:text-zinc-300 duration-500"
+                  : "cursor-not-allowed text-zinc-700",
+              )}
+              disabled={!nav.active}
             >
-              {item.name}
-            </Link>
+              {nav.name}
+            </ButtonLink>
           ))}
         </ul>
       </nav>
