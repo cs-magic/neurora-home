@@ -1,4 +1,4 @@
-import type { Project } from "@/.contentlayer/generated";
+import type { Project } from "contentlayer/generated";
 import { Badge } from "@cs-magic/shadcn/ui/badge";
 import _ from "lodash";
 import { Eye } from "lucide-react";
@@ -10,9 +10,25 @@ type Props = {
   views: number;
 };
 
+export const Badges = ({ project }: { project: Project }) => {
+  return (
+    <div className={"flex items-center gap-2 text-white mt-4 w-full flex-wrap"}>
+      {project.tags?.map((tag) => (
+        <Badge
+          key={tag}
+          variant={"outline"}
+          className={"border-gray-500/30 shrink-0"}
+        >
+          {_.startCase(_.camelCase(tag))}
+        </Badge>
+      ))}
+    </div>
+  );
+};
+
 export const Article: React.FC<Props> = ({ project, views }) => {
   return (
-    <Link href={`/projects/${project.slug}`}>
+    <Link href={`/apps/neurora_home/v2/app/(sub)/projects/${project.slug}`}>
       <article className="p-4 md:p-8">
         <div className="flex justify-between gap-2 items-center">
           <span className="text-xs duration-1000 text-zinc-200 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">
@@ -35,17 +51,7 @@ export const Article: React.FC<Props> = ({ project, views }) => {
           {project.title}
         </h2>
 
-        <div className={"flex items-center gap-2 text-white mt-4"}>
-          {project.tags?.map((tag) => (
-            <Badge
-              key={tag}
-              variant={"outline"}
-              className={"border-gray-500/30"}
-            >
-              {_.startCase(_.camelCase(tag))}
-            </Badge>
-          ))}
-        </div>
+        <Badges project={project} />
 
         <p className="z-20 mt-4 text-sm  duration-1000 text-zinc-400 group-hover:text-zinc-200">
           {project.description}
