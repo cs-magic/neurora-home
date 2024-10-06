@@ -1,18 +1,18 @@
+import { navs } from "@/app.config.ts";
 import { NeuroraBannerSVG } from "@assets/branding/neurora/neurora-banner-svg";
-// import NeuroraBannerSVG from "@assets/branding/neurora/neurora-banner.svg";
+import _ from "lodash";
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";
 
-const navigation = [
-  { name: "Projects", href: "/projects" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
-];
+const navigation = navs.map((nav) => ({
+  name: _.capitalize(nav),
+  href: `/${nav}`,
+}));
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black p-4 sm:p-8 md:p-16">
       <nav className="my-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
