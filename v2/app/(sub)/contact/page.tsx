@@ -21,9 +21,9 @@ const socials = [
   },
   {
     icon: <Twitter size={20} />,
-    href: "https://twitter.com/mark__2099",
+    href: "https://twitter.com/mark_neurora",
     label: "Twitter",
-    handle: "@mark_2099",
+    handle: "@mark_neurora",
   },
   {
     icon: <Mail size={20} />,
@@ -79,7 +79,7 @@ export default function Example() {
           );
 
           return (
-            <div className={"group"}>
+            <div className={"group"} key={s.label}>
               <Card>
                 {s.href ? (
                   <Link href={s.href} target="_blank">

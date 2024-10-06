@@ -44,7 +44,7 @@ export const Navigation: React.FC = () => {
                 )}
                 disabled={!nav.active}
               >
-                {_.capitalize(nav.name)}
+                {_.upperFirst(nav.name)}
               </ButtonLink>
             ))}
           </div>

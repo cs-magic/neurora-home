@@ -2,6 +2,7 @@ import { navs } from "@/app.config.ts";
 import { NeuroraBannerSVG } from "@assets/branding/neurora/neurora-banner-svg";
 import { ButtonLink } from "@cs-magic/react/components/button-link";
 import { cn } from "@cs-magic/shadcn/lib/utils";
+import _ from "lodash";
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";
@@ -23,7 +24,7 @@ export default function Home() {
               )}
               disabled={!nav.active}
             >
-              {nav.name}
+              {_.words(_.toLower(nav.name))}
             </ButtonLink>
           ))}
         </ul>
