@@ -70,7 +70,7 @@ const Top1Card = ({
 }) => {
   return (
     <Card>
-      <Link href={`/apps/neurora_home/v2/app/(sub)/projects/${project.slug}`}>
+      <Link href={`/projects/${project.slug}`}>
         <article className="relative w-full h-full p-4 md:p-8">
           <div className="flex items-center justify-between gap-2">
             <div className="text-xs text-zinc-100">

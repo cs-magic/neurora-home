@@ -1,7 +1,11 @@
 "use client";
 import { MarkWechatQrcodeSVG } from "@assets/branding/mark/mark-wechat-qrcode-svg.ts";
+import { GZHSVG } from "@assets/branding/third-parties/wechat/公众号-svg.ts";
+import JikeLogoPNMG from "@assets/branding/third-parties/即刻-logo.png";
 import { cn } from "@cs-magic/shadcn/lib/utils";
 import { Github, Mail, Twitter } from "lucide-react";
+import Image from "next/image";
+import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoWechat } from "react-icons/io5";
 import Link from "next/link";
 import { Card } from "app/components/card.tsx";
@@ -9,8 +13,44 @@ import { Navigation } from "app/components/nav.tsx";
 
 const socials = [
   {
-    icon: <IoLogoWechat size={20} />,
-    label: "WeChat",
+    icon: <Mail size={20} />,
+    href: "mailto:mark@cs-magic.com",
+    label: "Email",
+    handle: "mark@cs-magic.com",
+  },
+
+  {
+    icon: <Github size={20} />,
+    href: "https://github.com/markshawn2020",
+    label: "Github",
+    handle: "@markshawn2020",
+  },
+
+  {
+    icon: <FaXTwitter size={20} />,
+    href: "https://x.com/mark_neurora",
+    label: "X",
+    handle: "@mark_neurora",
+  },
+
+  {
+    icon: (
+      <Image
+        src={JikeLogoPNMG}
+        width={20}
+        height={20}
+        alt={"即刻"}
+        className={"saturate-0 group-hover:saturate-100"}
+      />
+    ),
+    href: "https://okjk.co/lEOfXD",
+    label: "即刻",
+    handle: "Mark 南川",
+  },
+
+  {
+    icon: <IoLogoWechat size={20} className={"group-hover:text-[#09B83E]"} />,
+    label: "微信个人号",
     handle: "@youshouldspeakhow",
     // href: "https://u.wechat.com/MIJ3DUFz7e-Oyb5Jc2_BIuM",
     qrcode: (
@@ -19,23 +59,12 @@ const socials = [
       />
     ),
   },
+
   {
-    icon: <Twitter size={20} />,
-    href: "https://twitter.com/mark_neurora",
-    label: "Twitter",
-    handle: "@mark_neurora",
-  },
-  {
-    icon: <Mail size={20} />,
-    href: "mailto:mark@cs-magic.com",
-    label: "Email",
-    handle: "mark@cs-magic.com",
-  },
-  {
-    icon: <Github size={20} />,
-    href: "https://github.com/markshawn2020",
-    label: "Github",
-    handle: "@markshawn2020",
+    icon: <GZHSVG width={24} className={"group-hover:text-[#07C160]"} />,
+    label: "微信公众号",
+    handle: "@南川随笔",
+    // href: "https://u.wechat.com/MIJ3DUFz7e-Oyb5Jc2_BIuM",
   },
 ];
 

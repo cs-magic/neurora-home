@@ -28,7 +28,7 @@ export const Badges = ({ project }: { project: Project }) => {
 
 export const Article: React.FC<Props> = ({ project, views }) => {
   return (
-    <Link href={`/apps/neurora_home/v2/app/(sub)/projects/${project.slug}`}>
+    <Link href={`/projects/${project.slug}`}>
       <article className="p-4 md:p-8">
         <div className="flex justify-between gap-2 items-center">
           <span className="text-xs duration-1000 text-zinc-200 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">

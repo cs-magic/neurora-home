@@ -16,7 +16,7 @@ export default function BPPage() {
   const [index, setIndex] = useState(0);
 
   const slides = [bp01, bp02, bp03];
-  console.log({ images: slides });
+  // console.log({ slides });
 
   return (
     <FlexContainer>
