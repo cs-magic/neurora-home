@@ -1,5 +1,5 @@
 "use client";
-import { navs } from "@/app/common.config.ts";
+import { navs } from "@/config/common.config.ts";
 import LogoSVG from "@assets/branding/neurora/neurora_logo_white_trans_1280.svg";
 import { ButtonLink } from "@cs-magic/react/components/button-link";
 import { cn } from "@cs-magic/shadcn/lib/utils";
@@ -24,9 +24,14 @@ export const Navigation: React.FC = () => {
   return (
     <header ref={ref}>
       <div
-        className={`fixed inset-x-0 top-0 z-50 backdrop-blur  duration-200 border-b  ${isIntersecting ? "bg-zinc-900/0 border-transparent" : "bg-zinc-900/500  border-zinc-800 "}`}
+        className={cn(
+          `fixed inset-x-0 top-0 z-50 backdrop-blur  duration-200 border-b`,
+          isIntersecting
+            ? "bg-zinc-900/0 border-transparent"
+            : "bg-zinc-900/500  border-zinc-800 ",
+        )}
       >
-        <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
+        <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto max-w-7xl">
           <div className="flex justify-between gap-0 sm:gap-4 md:gap-8">
             {navs.map((nav) => (
               <ButtonLink

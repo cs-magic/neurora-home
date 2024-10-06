@@ -1,4 +1,4 @@
-import { navs } from "@/app/common.config.ts";
+import { navs } from "@/config/common.config.ts";
 import BannerSVG from "@assets/branding/neurora/neurora-banner-current-trans.svg";
 import { ButtonLink } from "@cs-magic/react/components/button-link";
 import { cn } from "@cs-magic/shadcn/lib/utils";

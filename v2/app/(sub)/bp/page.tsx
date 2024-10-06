@@ -1,23 +1,19 @@
 "use client";
 
+import { SubpageLayout } from "@/app/components/subpage.layout.tsx";
 import bp01 from "@assets/bp/v2/01-intro_core.png";
 import bp02 from "@assets/bp/v2/02-framework.png";
 import bp03 from "@assets/bp/v2/03-workflow.png";
 import d from "@cs-magic/common/datetime";
 import { LabelLine } from "@cs-magic/react/components/label-line";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@cs-magic/shadcn/ui/hover-card";
-import { Label } from "@cs-magic/shadcn/ui/label";
+import { HoverCard, HoverCardTrigger } from "@cs-magic/shadcn/ui/hover-card";
 import { Progress } from "@cs-magic/shadcn/ui/progress";
 import _ from "lodash";
+import Image from "next/image";
 import { useState } from "react";
 
 // ref: https://yet-another-react-lightbox.com/
 import Lightbox from "yet-another-react-lightbox";
-import Inline from "yet-another-react-lightbox/plugins/inline";
 import "yet-another-react-lightbox/styles.css";
 
 const invstors = [
@@ -63,29 +59,25 @@ export default function BPPage() {
   // console.log({ slides });
 
   return (
-    <div className={"flex justify-center"}>
-      <div className={"flex flex-col gap-4 sm:gap-8 max-w-screen-sm h-fit"}>
-        <Lightbox
-          index={index}
-          slides={slides}
-          plugins={[Inline]}
-          on={{
-            view: (view) => setIndex(view.index),
-            click: () => setIsOpen(true),
-          }}
-          carousel={{
-            padding: 0,
-            spacing: 0,
-            imageFit: "cover",
-          }}
-          inline={{
-            style: {
-              width: "100%",
-              aspectRatio: 16 / 9,
-              cursor: "pointer",
-            },
+    <SubpageLayout
+      title={"Business Plan"}
+      description={
+        "As a solo developer crafting a suite of products, I'm seeking a ￥100W angel investment."
+      }
+    >
+      <div className={"flex flex-col gap-4 sm:gap-8"}>
+        <Image
+          src={slides[0]}
+          alt={"slide"}
+          width={1920}
+          height={1080}
+          priority
+          className={"cursor-pointer"}
+          onClick={() => {
+            setIsOpen(true);
           }}
         />
+
         <Lightbox
           open={isOpen}
           index={index}
@@ -95,12 +87,6 @@ export default function BPPage() {
             closeOnBackdropClick: true,
           }}
         />
-        <LabelLine title={"Motivation: "}>
-          <div className={"italic text-wrap"}>
-            As a solo developer crafting a suite of products, I'm seeking a{" "}
-            <span className={""}>￥{targetAmount}W</span> angel investment.
-          </div>
-        </LabelLine>
 
         <LabelLine title={"Progress: "}>
           <div className={" h-6 relative"}>
@@ -136,6 +122,6 @@ export default function BPPage() {
           北京中关村智造大街（人工智能产业集聚区）
         </LabelLine>
       </div>
-    </div>
+    </SubpageLayout>
   );
 }

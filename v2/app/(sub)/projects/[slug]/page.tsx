@@ -4,7 +4,7 @@ import { Mdx } from "@/app/components/mdx.tsx";
 import { Header } from "app/(sub)/projects/[slug]/header.tsx";
 import "app/(sub)/projects/[slug]/mdx.css";
 import { ReportView } from "app/(sub)/projects/[slug]/view.tsx";
-import { redis } from "@/app/server.config";
+import { redis } from "@/config/server.config.ts";
 
 export const revalidate = 60;
 

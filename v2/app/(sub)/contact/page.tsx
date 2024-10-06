@@ -1,4 +1,5 @@
 "use client";
+import { SubpageLayout } from "@/app/components/subpage.layout.tsx";
 import MarkWechatQrcodeSVG from "@assets/branding/mark/mark-wechat-qrcode.svg";
 import GZHSVG from "@assets/branding/third-parties/wechat/公众号.svg";
 import JikeLogoPNMG from "@assets/branding/third-parties/即刻-logo.png";
@@ -67,9 +68,12 @@ const socials = [
 
 export default function Example() {
   return (
-    <div className="container flex flex-col items-center justify-center min-h-screen px-4 mx-auto gap-8 ">
-      {/*<div className={"text-white text-2xl"}>Connect boring me via:</div>*/}
-
+    <SubpageLayout
+      title={"Contact Me"}
+      description={
+        "If you encounter any technical challenges or personal concerns."
+      }
+    >
       <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-2 lg:gap-16">
         {socials.map((s) => {
           const Inner = () => (
@@ -119,6 +123,6 @@ export default function Example() {
           );
         })}
       </div>
-    </div>
+    </SubpageLayout>
   );
 }

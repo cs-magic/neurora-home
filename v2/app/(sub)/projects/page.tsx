@@ -1,7 +1,8 @@
-import { docGroups, topDocs } from "@/app/common.config.ts";
+import { docGroups, topDocs } from "@/config/common.config.ts";
 import { DisplayTab } from "@/app/components/cards.tsx";
 import { Top1Card } from "@/app/components/card-top1.tsx";
-import { redis } from "@/app/server.config.ts";
+import { SubpageLayout } from "@/app/components/subpage.layout.tsx";
+import { redis } from "@/config/server.config.ts";
 import { View } from "@/types/interface.ts";
 import {
   Tabs,
@@ -38,18 +39,12 @@ export default async function ProjectsPage() {
     );
 
   return (
-    <div className="px-6 pt-4 mx-auto space-y-8 md:space-y-16 w-full">
-      <div className="mx-auto lg:mx-0">
-        <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-          Projects
-        </h2>
-        <p className="mt-4 text-zinc-400">
-          Most projects are out of my own interest and open-source, some would
-          be commercial.
-        </p>
-      </div>
-      <div className="w-full h-px bg-zinc-800" />
-
+    <SubpageLayout
+      title={"project"}
+      description={
+        "My portfolio comprises mainly open-source projects driven by personal interest, with some commercial ventures."
+      }
+    >
       <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
         <Top1Card project={featuredProjects[0]} views={views} />
 
@@ -92,6 +87,6 @@ export default async function ProjectsPage() {
           </TabsContent>
         ))}
       </Tabs>
-    </div>
+    </SubpageLayout>
   );
 }

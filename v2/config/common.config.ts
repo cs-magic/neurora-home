@@ -6,6 +6,7 @@ export const navs = [
     active: false,
   },
   { href: "/bp", name: "BP", active: true },
+  { href: "/career", name: "career", active: true },
   { href: "/contact", name: "contact", active: true },
 ];
 export const revalidate = 60;
