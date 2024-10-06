@@ -19,7 +19,7 @@ export default function BPPage() {
   // console.log({ slides });
 
   return (
-    <FlexContainer>
+    <FlexContainer className={""}>
       <FlexContainer
         orientation={"vertical"}
         className={"gap-4 sm:gap-8 max-w-screen-sm"}

@@ -1,5 +1,6 @@
 "use client";
-import { navs } from "@/app.config.ts";
+import { navs } from "@/app/common.config.ts";
+import { NeuroraSVG } from "@assets/branding/neurora/neurora.svg.ts";
 import { ButtonLink } from "@cs-magic/react/components/button-link";
 import { cn } from "@cs-magic/shadcn/lib/utils";
 import { Button } from "@cs-magic/shadcn/ui/button";
@@ -53,7 +54,7 @@ export const Navigation: React.FC = () => {
             href="/"
             className="duration-200 text-zinc-300 hover:text-zinc-100"
           >
-            <ArrowLeft className="w-6 h-6 " />
+            <NeuroraSVG width={32} height={32} />
           </Link>
         </div>
       </div>
