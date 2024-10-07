@@ -25,7 +25,7 @@ const Menus = ({ className, ...props }: HTMLProps<HTMLDivElement>) => {
   const pathname = usePathname();
 
   return (
-    <div className={cn("", className)} {...props}>
+    <div className={cn("pt-8 sm:pt-0", className)} {...props}>
       {navs.map((nav) => (
         <ButtonLink
           variant="link"
@@ -36,6 +36,7 @@ const Menus = ({ className, ...props }: HTMLProps<HTMLDivElement>) => {
               ? "duration-200 text-zinc-400 hover:text-zinc-100"
               : "cursor-not-allowed text-zinc-700",
             pathname === nav.href && "underline text-zinc-100",
+            "focus-visible:ring-0 focus-visible:ring-offset-0",
           )}
           disabled={!nav.active}
         >
