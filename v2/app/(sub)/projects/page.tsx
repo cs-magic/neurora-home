@@ -1,7 +1,8 @@
-import { docGroups, topDocs } from "@/config/common.config.ts";
-import { DisplayTab } from "@/app/components/cards.tsx";
-import { Top1Card } from "@/app/components/card-top1.tsx";
-import { SubpageLayout } from "@/app/components/subpage.layout.tsx";
+import { CardArticle } from "@/components/card-article.tsx";
+import { Top1Card } from "@/components/card-top1.tsx";
+import { DisplayTab } from "@/components/cards.tsx";
+import { SubpageLayout } from "@/components/subpage.layout.tsx";
+import { docs } from "@/config/common.config.ts";
 import { redis } from "@/config/server.config.ts";
 import { View } from "@/types/interface.ts";
 import {
@@ -10,11 +11,13 @@ import {
   TabsList,
   TabsTrigger,
 } from "@cs-magic/shadcn/ui/tabs";
-import { CardArticle } from "@/app/components/card-article.tsx";
-import { Card } from "app/components/card.tsx";
+import { Card } from "@/components/card.tsx";
 import { allProjects } from "contentlayer/generated";
 import _ from "lodash";
 import React from "react";
+
+const docGroups = docs.groups;
+const topDocs = docs.top3;
 
 export default async function ProjectsPage() {
   const views = (

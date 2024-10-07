@@ -1,10 +1,10 @@
 "use client";
-import { SubpageLayout } from "@/app/components/subpage.layout.tsx";
+import { SubpageLayout } from "@/components/subpage.layout.tsx";
 import MarkWechatQrcodeSVG from "@assets/branding/mark/mark-wechat-qrcode.svg";
 import GZHSVG from "@assets/branding/third-parties/wechat/公众号.svg";
 import JikeLogoPNMG from "@assets/branding/third-parties/即刻-logo.png";
 import { cn } from "@cs-magic/shadcn/lib/utils";
-import { Card } from "app/components/card.tsx";
+import { Card } from "@/components/card.tsx";
 import { Github, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

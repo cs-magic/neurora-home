@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
-import { Mdx } from "@/app/components/mdx.tsx";
+import { Mdx } from "@/components/mdx.tsx";
 import { Header } from "app/(sub)/projects/[slug]/header.tsx";
 import "app/(sub)/projects/[slug]/mdx.css";
 import { ReportView } from "app/(sub)/projects/[slug]/view.tsx";

@@ -1,4 +1,6 @@
-import { Navigation } from "@/app/components/nav.tsx";
+import { Navigation } from "@/components/nav.tsx";
+
+export const revalidate = 1;
 
 export default function ProjectsLayout({
   children,

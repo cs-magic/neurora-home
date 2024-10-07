@@ -18,9 +18,12 @@ import {
 import _ from "lodash";
 import { Menu } from "lucide-react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import React, { HTMLProps, useEffect, useRef, useState } from "react";
 
 const Menus = ({ className, ...props }: HTMLProps<HTMLDivElement>) => {
+  const pathname = usePathname();
+
   return (
     <div className={cn("", className)} {...props}>
       {navs.map((nav) => (
@@ -32,6 +35,7 @@ const Menus = ({ className, ...props }: HTMLProps<HTMLDivElement>) => {
             nav.active
               ? "duration-200 text-zinc-400 hover:text-zinc-100"
               : "cursor-not-allowed text-zinc-700",
+            pathname === nav.href && "underline text-zinc-100",
           )}
           disabled={!nav.active}
         >
@@ -69,7 +73,7 @@ export const Navigation: React.FC = () => {
         <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto max-w-7xl">
           {/* <= sm */}
           <Sheet>
-            <SheetTrigger>
+            <SheetTrigger className={"sm:hidden"}>
               <Menu />
             </SheetTrigger>
             <SheetContent
@@ -87,7 +91,7 @@ export const Navigation: React.FC = () => {
           <Menus className={"hidden sm:flex gap-4 lg:gap-8"} />
 
           <Link
-            href="/"
+            href="/apps/neurora_home/v2/public"
             className="duration-200 text-zinc-300 hover:text-zinc-100"
           >
             <LogoSVG width={32} height={32} />

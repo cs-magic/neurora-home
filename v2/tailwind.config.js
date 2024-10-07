@@ -7,6 +7,7 @@ basicConfig.content.push(
   "../../../node_modules/@cs-magic/react/dist/**/*",
 
   "./app/**/*.{js,ts,jsx,tsx}",
+  "./components/**/*.{js,ts,jsx,tsx}",
   "./mdx-components.tsx",
   "./content/**/*.mdx",
 );

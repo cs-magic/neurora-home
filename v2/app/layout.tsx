@@ -1,8 +1,8 @@
 import { cn } from "@cs-magic/shadcn/lib/utils";
-import { Inter } from "@next/font/google";
-import LocalFont from "@next/font/local";
+import { Inter } from "next/font/google";
+import LocalFont from "next/font/local";
 import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
+import { Analytics } from "@/components/analytics";
 import LogoPNG from "@assets/branding/neurora/neurora_logo_white_black_1280.png";
 import BannerPNG from "@assets/branding/neurora/neurora-banner-white-black.png";
 

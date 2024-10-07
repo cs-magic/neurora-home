@@ -1,4 +1,4 @@
-import { SubpageLayout } from "@/app/components/subpage.layout.tsx";
+import { SubpageLayout } from "@/components/subpage.layout.tsx";
 import InternImage from "@assets/career/intern.png";
 import { FlexContainer } from "@cs-magic/react/components/flex-container";
 import Image from "next/image";

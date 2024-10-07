@@ -1,4 +1,4 @@
-import { CardBadges } from "@/app/components/card-badges.tsx";
+import { CardBadges } from "@/components/card-badges.tsx";
 import type { Project } from "contentlayer/generated";
 import { Eye } from "lucide-react";
 import Link from "next/link";

@@ -1,5 +1,5 @@
-import { CardBadges } from "@/app/components/card-badges.tsx";
-import { Card } from "@/app/components/card.tsx";
+import { CardBadges } from "@/components/card-badges.tsx";
+import { Card } from "@/components/card.tsx";
 import { View } from "@/types/interface.ts";
 import { allProjects } from "contentlayer/generated";
 import { Eye } from "lucide-react";

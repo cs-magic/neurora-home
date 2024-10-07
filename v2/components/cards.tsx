@@ -1,5 +1,5 @@
-import { CardArticle } from "@/app/components/card-article.tsx";
-import { Card } from "@/app/components/card.tsx";
+import { CardArticle } from "@/components/card-article.tsx";
+import { Card } from "@/components/card.tsx";
 import { View } from "@/types/interface.ts";
 import { allProjects } from "contentlayer/generated";
 import React from "react";
