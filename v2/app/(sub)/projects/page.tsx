@@ -40,7 +40,7 @@ export default async function ProjectsPage() {
 
   return (
     <SubpageLayout
-      title={"project"}
+      title={"Projects"}
       description={
         "My portfolio comprises mainly open-source projects driven by personal interest, with some commercial ventures."
       }

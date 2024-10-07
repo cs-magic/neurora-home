@@ -3,9 +3,44 @@ import { navs } from "@/config/common.config.ts";
 import LogoSVG from "@assets/branding/neurora/neurora_logo_white_trans_1280.svg";
 import { ButtonLink } from "@cs-magic/react/components/button-link";
 import { cn } from "@cs-magic/shadcn/lib/utils";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerTrigger,
+} from "@cs-magic/shadcn/ui/drawer";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@cs-magic/shadcn/ui/sheet";
 import _ from "lodash";
+import { Menu } from "lucide-react";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { HTMLProps, useEffect, useRef, useState } from "react";
+
+const Menus = ({ className, ...props }: HTMLProps<HTMLDivElement>) => {
+  return (
+    <div className={cn("", className)} {...props}>
+      {navs.map((nav) => (
+        <ButtonLink
+          variant="link"
+          key={nav.name}
+          href={nav.href}
+          className={cn(
+            nav.active
+              ? "duration-200 text-zinc-400 hover:text-zinc-100"
+              : "cursor-not-allowed text-zinc-700",
+          )}
+          disabled={!nav.active}
+        >
+          {_.upperFirst(nav.name)}
+        </ButtonLink>
+      ))}
+    </div>
+  );
+};
 
 export const Navigation: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
@@ -32,23 +67,24 @@ export const Navigation: React.FC = () => {
         )}
       >
         <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto max-w-7xl">
-          <div className="flex justify-between gap-0 sm:gap-4 md:gap-8">
-            {navs.map((nav) => (
-              <ButtonLink
-                variant="link"
-                key={nav.name}
-                href={nav.href}
-                className={cn(
-                  nav.active
-                    ? "duration-200 text-zinc-400 hover:text-zinc-100"
-                    : "cursor-not-allowed text-zinc-700",
-                )}
-                disabled={!nav.active}
-              >
-                {_.upperFirst(nav.name)}
-              </ButtonLink>
-            ))}
-          </div>
+          {/* <= sm */}
+          <Sheet>
+            <SheetTrigger>
+              <Menu />
+            </SheetTrigger>
+            <SheetContent
+              className={
+                "w-fit dark border-none "
+                // "h-screen w-[50vw] overflow-auto ml-auto rounded-none bg-gray-950 border-none flex flex-col justify-center"
+                // "fixed right-0 top-0 bottom-0 fixed z-10 flex outline-none"
+              }
+            >
+              <Menus className={"sm:hidden flex flex-col gap-2"} />
+            </SheetContent>
+          </Sheet>
+
+          {/* > sm */}
+          <Menus className={"hidden sm:flex gap-4 lg:gap-8"} />
 
           <Link
             href="/"

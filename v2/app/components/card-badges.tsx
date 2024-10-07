@@ -12,7 +12,11 @@ export const CardBadges = ({ project }: { project: Project }) => {
           variant={"outline"}
           className={"border-gray-500/30 shrink-0 text-gray-100"}
         >
-          {_.startCase(_.camelCase(tag))}
+          {tag
+            .split(/[_-]/g)
+            .map((s) => _.startCase(_.upperFirst(s)))
+            .join(" ")}
+          {/*{_.startCase(_.upperFirst(tag))}*/}
         </Badge>
       ))}
     </div>

@@ -118,8 +118,11 @@ export default function BPPage() {
           </div>
         </LabelLine>
 
-        <LabelLine title={"Base: "}>
-          北京中关村智造大街（人工智能产业集聚区）
+        <LabelLine title={"Office: "}>北京中关村智造大街</LabelLine>
+        <LabelLine title={"Email: "}>
+          <a href={"mailto:founder@cs-magic.com"} className={"underline"}>
+            founder@cs-magic.com
+          </a>
         </LabelLine>
       </div>
     </SubpageLayout>
