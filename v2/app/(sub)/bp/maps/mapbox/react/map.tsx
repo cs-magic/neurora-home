@@ -2,7 +2,6 @@ import {
   initialZoom,
   MAPBOX_TOKEN,
   mapStyle,
-  officePosition,
   offices,
 } from "@/app/(sub)/bp/maps/config.ts";
 import Pin from "@/app/(sub)/bp/maps/mapbox/react/pin.tsx";
@@ -39,8 +38,8 @@ export default function TheMap() {
       <ScaleControl />
 
       <Marker
-        // key={`marker-${index}`}
-        {...officePosition}
+        longitude={offices[0].lng}
+        latitude={offices[0].lat}
         anchor="bottom"
         onClick={(e) => {
           // If we let the click event propagates to the map, it will immediately close the popup
