@@ -91,7 +91,7 @@ export const Navigation: React.FC = () => {
           <Menus className={"hidden sm:flex gap-4 lg:gap-8"} />
 
           <Link
-            href="/apps/neurora_home/v2/public"
+            href="/"
             className="duration-200 text-zinc-300 hover:text-zinc-100"
           >
             <LogoSVG width={32} height={32} />
