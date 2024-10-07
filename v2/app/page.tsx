@@ -1,11 +1,10 @@
+import Particles from "@/components/particles";
 import { navs } from "@/config/common.config.ts";
 import BannerSVG from "@assets/branding/neurora/neurora-banner-current-trans.svg";
 import { ButtonLink } from "@cs-magic/react/components/button-link";
 import { cn } from "@cs-magic/shadcn/lib/utils";
 import _ from "lodash";
-import Link from "next/link";
 import React from "react";
-import Particles from "@/components/particles";
 
 export default function Home() {
   return (
@@ -37,23 +36,12 @@ export default function Home() {
       />
 
       <BannerSVG className="py-3.5 px-1 w-full max-w-screen-md z-10 cursor-default duration-100 animate-title text-white" />
-      {/*<h1 className="py-3.5 px-0.5 z-10 cursor-default duration-100 animate-title text-4xl text-transparent bg-white text-edge-outline font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">*/}
-      {/*  <p>NEURORA</p>*/}
-      {/*  /!*<p className={"text-6xl"}>飞脑科技</p>*!/*/}
-      {/*</h1>*/}
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
-          Hi, I'm{" "}
-          <Link
-            href="https://github.com/markshawn2020"
-            target="_blank"
-            className="underline duration-500 hover:text-zinc-300"
-          >
-            Mark
-          </Link>
-          , An Indie Hacker passionate about building COOL things 🚀 🚀 🚀
+          Hi, I'm Mark , An Indie Hacker passionate about building COOL things
+          🚀 🚀 🚀
         </h2>
       </div>
     </div>
