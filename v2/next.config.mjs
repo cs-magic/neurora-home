@@ -25,6 +25,13 @@ const nextConfig = {
 
     return config;
   },
+
+  images: {
+    remotePatterns: [
+      { protocol: "http", hostname: "**" },
+      { protocol: "https", hostname: "**" },
+    ],
+  },  
 };
 
 export default withContentlayer(nextConfig);

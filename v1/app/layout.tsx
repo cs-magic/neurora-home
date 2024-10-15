@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 
 import "@assets/styles/main.css";
+import "../styles/github-markdown.css"; // 添加这一行
 
 export const metadata: Metadata = {
   title: "飞脑科技",
