@@ -28,6 +28,6 @@
 
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js", "../../neurora_playground/src/components/CoverImage.tsx", "../../neurora_playground/src/components/MarkdownRenderer.tsx"],
   "exclude": ["node_modules"]
 }
