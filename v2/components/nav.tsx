@@ -1,25 +1,19 @@
 "use client";
 import { navs } from "@/config/common.config.ts";
-import LogoSVG from "@assets/branding/neurora/neurora_logo_white_trans_1280.svg";
+import Image from "next/image";
 import { ButtonLink } from "@cs-magic/react/components/button-link";
 import { cn } from "@cs-magic/shadcn/lib/utils";
 import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerTrigger,
-} from "@cs-magic/shadcn/ui/drawer";
-import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetTrigger,
+  SheetTrigger
 } from "@cs-magic/shadcn/ui/sheet";
 import _ from "lodash";
 import { Menu } from "lucide-react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import React, { HTMLProps, useEffect, useRef, useState } from "react";
+import LogoSVG from "@assets/branding/neurora/neurora_logo_white_trans_1280.svg";
 
 const Menus = ({ className, ...props }: HTMLProps<HTMLDivElement>) => {
   const pathname = usePathname();

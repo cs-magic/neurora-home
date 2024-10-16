@@ -1,8 +1,7 @@
-import { withContentlayer } from "next-contentlayer";
-import path from "path";
 import dotenv from "dotenv";
+import { withContentlayer } from "next-contentlayer";
 import { fileURLToPath } from "node:url";
-import { logEnv } from "@cs-magic/common/env/log-env";
+import path from "path";
 
 dotenv.config({
   path: path.join(fileURLToPath(import.meta.url), "../../../.env"),

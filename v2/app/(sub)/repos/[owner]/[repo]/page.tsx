@@ -1,11 +1,9 @@
-import React from 'react';
-import { getRepository, getReadmeContent } from '@/lib/github';
+import { getReadmeContent, getRepository } from '@/lib/github';
 import { generateCoverImage } from '@/lib/midjourney';
-// import MarkdownRenderer from '@/components/MarkdownRenderer';
-import ActionButtons from '@/components/ActionButtons';
 import CoverImage from '@/components/CoverImage';
 import MarkdownRenderer from '@/components/MarkdownRenderer';
-import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa';
+import { FaCodeBranch, FaEye, FaStar } from 'react-icons/fa';
+import Link from 'next/link';
 
 
 interface RepoPageProps {
@@ -38,6 +36,7 @@ export default async function RepoPage({ params:{owner,repo} }: RepoPageProps) {
           </div>
           
           <div className="p-8">
+            <Link href={`/repos/${owner}`}>
             <div className="flex items-center space-x-6 mb-8">
               <img src={repository.owner.avatar_url} alt={repository.owner.login} className="w-16 h-16 rounded-full border-4 border-white shadow-lg" />
               <div>
@@ -45,7 +44,8 @@ export default async function RepoPage({ params:{owner,repo} }: RepoPageProps) {
                 <p className="text-gray-600">Repository Owner</p>
               </div>
             </div>
-            
+            </Link>
+
             <div className="flex flex-wrap gap-6 mb-8">
               <a
                 href={repository.html_url}
