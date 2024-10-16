@@ -5,7 +5,12 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
 async function getRepos(owner: string) {
   const { data } = await octokit.repos.listForUser({ username: owner, sort: 'updated', per_page: 100 });
-  return data;
+  return data.map(repo => ({
+    ...repo,        
+    stargazers_count: repo.stargazers_count ?? 0,
+    forks_count: repo.forks_count ?? 0,
+    updated_at: repo.updated_at ?? new Date().toISOString()
+  }));
 }
 
 export default async function OwnerReposPage({ params }: { params: { owner: string } }) {
