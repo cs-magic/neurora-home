@@ -41,12 +41,12 @@ const WechatLoginPopover = () => {
   );
 };
 
-export type LoginButtonProps = ButtonProps & {
+type LoginButtonProps = ButtonProps & {
   icon: ReactNode;
   text: string;
   popoverContent?: ReactNode;
 };
-export const LoginButton = ({
+const LoginButton = ({
   icon,
   text,
   onClick,

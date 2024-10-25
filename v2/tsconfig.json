@@ -24,8 +24,11 @@
     "paths": {
       "@/*": ["./*"],
       "contentlayer/generated": ["./.contentlayer/generated"],
-      "@assets/*": ["../../../assets/*"]
-
+      "@assets/*": ["../../../assets/*"],
+      "@/components/ui/*": [
+        "../../../node_modules/@cs-magic/shadcn/dist/ui/*",
+//        "../../../packages/frontend-shadcn/src/ui/*",
+      ]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js", "../../neurora_playground/src/components/CoverImage.tsx", "../../neurora_playground/src/components/MarkdownRenderer.tsx"],

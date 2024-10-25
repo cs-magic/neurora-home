@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import { withContentlayer } from "next-contentlayer";
 import { fileURLToPath } from "node:url";
 import path from "path";
+import withFonts from "next-fonts";
 
 dotenv.config({
   path: path.join(fileURLToPath(import.meta.url), "../../../.env"),
@@ -30,7 +31,7 @@ const nextConfig = {
       { protocol: "http", hostname: "**" },
       { protocol: "https", hostname: "**" },
     ],
-  },  
+  },
 };
 
-export default withContentlayer(nextConfig);
+export default withFonts(withContentlayer(nextConfig));
