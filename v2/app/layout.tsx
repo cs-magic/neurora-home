@@ -1,3 +1,10 @@
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 import { cn } from "@cs-magic/shadcn/lib/utils";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
@@ -65,18 +72,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-      <head>
-        <Analytics />
-      </head>
-      <body
-        className={cn(
-          `bg-black text-white  overflow-x-hidden`,
-          process.env.NODE_ENV === "development" && "debug-screens",
-        )}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+        <head>
+          <Analytics />
+        </head>
+        <body
+          className={cn(
+            `bg-black text-white  overflow-x-hidden`,
+            process.env.NODE_ENV === "development" && "debug-screens",
+          )}
+        >
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
