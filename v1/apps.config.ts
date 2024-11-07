@@ -25,7 +25,7 @@ export const apps: IAppCard[] = [
   {
     title: "你的图腾",
     description: "一键生成你姓名的图形化解释",
-    Icon: TotemGPTLogoSVG,
+    icon: TotemGPTLogoSVG,
     version: totemGPTPackageJson.version,
     lastUpdated: new Date(),
     status: AppStatus.stable,
@@ -47,7 +47,7 @@ export const apps: IAppCard[] = [
   {
     title: "飞脑助手",
     description: "更像真人的 AI 社交助理",
-    Icon: AssistantLogoSVG,
+    icon: AssistantLogoSVG,
     version: "0.8.969",
     lastUpdated: new Date(2024, 4, 1),
     status: AppStatus.stable,
@@ -68,7 +68,7 @@ export const apps: IAppCard[] = [
   {
     title: "Poketto",
     description: "简单好用的智能体平台",
-    Icon: PokettoLogo.src,
+    icon: PokettoLogo.src,
     version: "0.1.0",
     lastUpdated: new Date(2023, 7, 31),
     status: AppStatus.archived,
@@ -84,7 +84,7 @@ export const apps: IAppCard[] = [
   {
     title: "Eval AI",
     description: "非常好用的大模型评测平台",
-    Icon: EvalAILogo.src,
+    icon: EvalAILogo.src,
     version: "0.1.0",
     lastUpdated: new Date(2024, 3, 30),
     status: AppStatus.experimental,
@@ -100,7 +100,7 @@ export const apps: IAppCard[] = [
   {
     title: "Thinkow",
     description: "会思考的大模型工作流",
-    Icon: ThinkowLogo.src,
+    icon: ThinkowLogo.src,
     version: "0.1.0",
     lastUpdated: new Date(2024, 2, 31),
     status: AppStatus.experimental,
